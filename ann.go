@@ -34,5 +34,7 @@ type nNetConf struct {
 }
 
 func main() {
+	//membuka file dataset train`
+	data, err := os.Open("train.csv")
 
 }
