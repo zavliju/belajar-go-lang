@@ -29,7 +29,7 @@ type nNetConf struct {
 	inputSyaraf 	int
 	outputSyaraf 	int
 	hiddenSyaraf 	int
-	jumEpoch		int
+	jumEpoch	int
 	rateLearning	float64
 }
 
