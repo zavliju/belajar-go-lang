@@ -36,5 +36,22 @@ type nNetConf struct {
 func main() {
 	//membuka file dataset train`
 	data, err := os.Open("train.csv")
+	
+	//arsitektur jaringan dan parameter pembelajaran
+	config := nNetconf{
+		inNeurons: 4,
+		ouNeurons: 3,
+		hiNeurons: 3,
+		nuEpochs: 5000,
+		leRate: 0.3,
+	}
+	
+	//train jaringan syaraf
+	net := newNet(config)
+	if err := net.train(inputs, labels); err !nil {
+		log.Fatal(err)
+	}
+	
+	//
 
 }
